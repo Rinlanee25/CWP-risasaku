@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+import sys
+import re
+
+if len(sys.argv) != 3:
+    print("none")
+else:
+    keyword = sys.argv[1]
+    text = sys.argv[2]
+    
+    # ใช้ re.findall() ค้นหาทุกคำที่ตรงกันแล้วเก็บใส่ List
+    matches = re.findall(re.escape(keyword), text)
+    
+    if len(matches) > 0:
+        print(len(matches))
+    else:
+        print("none")
