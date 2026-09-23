@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#ปัดเลขทศนิยมขึ้นเป็นจำนวนเต็ม
+#ปัดเศษขึ้นเป็นจำนวนเต็มที่ใกล้ที่สุด
 import math
 
 number = float(input("Give me a number: "))
