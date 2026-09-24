@@ -63,14 +63,14 @@ def check_bishop(board, kr, kc):
 
         while 0 <= r < len(board) and 0 <= c < len(board[r]):
 
-            # เจอตัวหมาก
-            if board[r][c] != ".":
+            # สนใจเฉพาะตัวหมากที่โจทย์กำหนด
+            if board[r][c] in "PBRQK":
 
                 # ตัวแรกเป็น Bishop
                 if board[r][c] == "B":
                     return True
 
-                # ตัวอื่นขวางทาง
+                # มีหมากตัวอื่นขวาง
                 break
 
             r += dr
@@ -96,13 +96,14 @@ def check_rook(board, kr, kc):
 
         while 0 <= r < len(board) and 0 <= c < len(board[r]):
 
-            if board[r][c] != ".":
+            # สนใจเฉพาะตัวหมากที่โจทย์กำหนด
+            if board[r][c] in "PBRQK":
 
                 # ตัวแรกเป็น Rook
                 if board[r][c] == "R":
                     return True
 
-                # มีตัวอื่นขวาง
+                # มีหมากตัวอื่นขวาง
                 break
 
             r += dr
@@ -132,13 +133,14 @@ def check_queen(board, kr, kc):
 
         while 0 <= r < len(board) and 0 <= c < len(board[r]):
 
-            if board[r][c] != ".":
+            # สนใจเฉพาะตัวหมากที่โจทย์กำหนด
+            if board[r][c] in "PBRQK":
 
                 # ตัวแรกเป็น Queen
                 if board[r][c] == "Q":
                     return True
 
-                # มีตัวอื่นขวาง
+                # มีหมากตัวอื่นขวาง
                 break
 
             r += dr
