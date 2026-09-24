@@ -3,11 +3,19 @@ def checkmate(board):
     rows = board.split("\n")
 
     # หา King
+    king_r = -1
+    king_c = -1
+
     for r in range(len(rows)):
         for c in range(len(rows[r])):
             if rows[r][c] == "K":
                 king_r = r
                 king_c = c
+
+    # ถ้าไม่มี King
+    if king_r == -1:
+        print("Fail")
+        return
 
     # ตรวจ Pawn
     for r in range(len(rows)):
